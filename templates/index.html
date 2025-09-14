@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ugoo Cleaning Solutions - Water Tank Cleaning</title>
+  <!-- Fixed invalid rel attribute; changed to 'alternate' assuming it was a typo; if meant to be stylesheet, update accordingly -->
+  <link rel="alternate" href="index2.html"/>
+  <style>
+    /* Reset and base */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: #333;
+    }
+    a {
+      text-decoration: none;
+      color: #007BFF;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Header */
+    header {
+      background: #004080;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .logo-name-search {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      flex: 1 1 60%;
+    }
+    .logo-name-search img.logo {
+      height: 50px;
+      width: 50px;
+      object-fit: contain;
+    }
+    .company-name {
+      font-size: 1.5rem;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+    .search-bar input[type="search"] {
+      padding: 5px 10px;
+      font-size: 1rem;
+      border-radius: 4px;
+      border: none;
+      outline: none;
+      width: 200px;
+    }
+    nav {
+      flex: 1 1 40%;
+      display: flex;
+      justify-content: flex-end;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      font-weight: 600;
+      padding: 8px 12px;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+    nav a:hover {
+      background: #0066cc;
+    }
+
+    /* Tank images and names */
+    .tank-types {
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+      margin: 30px 20px 40px;
+      flex-wrap: wrap;
+    }
+    .tank-type {
+      text-align: center;
+      max-width: 200px;
+    }
+    .tank-type img {
+      width: 100%;
+      max-width: 200px;
+      height: 200px;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    .tank-type h3 {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    /* Services Section */
+    .service {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 1px solid #ddd;
+      padding: 15px 0;
+    }
+    .service-text h2 {
+      font-size: 18px;
+      margin: 0 0 5px;
+      color: #222;
+      text-align: center;
+      border-bottom: 3px solid #007BFF;
+      padding-bottom: 5px;
+    }
+    .price {
+      display: inline-block;
+      font-size: 16px;
+      font-weight: bold;
+      margin: 5px 0;
+      color: #000;
+      padding: 6px 12px;
+      background: #eaf4ff;
+      border: 2px solid #0077cc;
+      border-radius: 8px;
+      margin-bottom: 12px;
+    }
+    .service-img {
+      width: 25%;
+      text-align: center;
+    }
+    .service-img img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 8px;
+    }
+    .add-btn {
+      margin-top: 10px;
+      background: #007bff;
+      color: #fff;
+      border: none;
+      padding: 6px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    .add-btn:hover {
+      background: #0056b3;
+    }
+
+    /* Footer */
+    footer {
+      background: #004080;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
+    footer h2 {
+      margin-bottom: 10px;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-name-search">
+    <img src="https://i.postimg.cc/MHRnxZLD/IMG-20250910-WA0019.jpg" alt="U Goo Solutions Logo" class="logo" />
+    <div class="company-name">Ugoo <br> Cleaning Solutions</div>
+    <div class="search-bar">
+      <input type="search" placeholder="Search..." aria-label="Search" />
+    </div>
+  </div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="/admin">Admin login</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <!-- Tank Types -->
+  <section class="tank-types">
+    <div class="tank-type">
+      <img src="https://i.postimg.cc/JnLgKpLz/IMG-20250910-224436.jpg" alt="Overhead Water Tank" />
+      <h3>Overhead <br> Water Tank</h3>
+    </div>
+    <div class="tank-type">
+      <img src="https://i.postimg.cc/LXGVNXfB/IMG-20250910-224708.jpg" alt="Underground Water Tank" />
+      <h3>Underground <br> Water Tank</h3>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <h1>Overhead Tank</h1>
+
+  <!-- Service 1 -->
+  <div class="service">
+    <div class="service-text">
+      <h2>Up to 1000 Litres Water Tank Cleaning</h2>
+      <div class="price">₹729</div>
+      <ul>
+        <li>Includes inspection, water draining</li>
+        <li>Sludge removal, scrubbing, high-pressure jet cleaning</li>
+      </ul>
+      <a href="/detailed1" class="show-more">Show more →</a>
+    </div>
+    <div class="service-img">
+      <img src="https://i.postimg.cc/d1Kk2tFr/IMG-20250910-WA0023.jpg" alt="Overhead Tank Cleaning">
+      <a href="/form"><button class="add-btn">Book Now</button></a>
+    </div>
+  </div>
+
+  <!-- Service 2 -->
+  <div class="service">
+    <div class="service-text">
+      <h2>1000 - 2000 Litres Water Tank Cleaning</h2>
+      <div class="price">₹859</div>
+      <ul>
+        <li>Water draining, sediment removal</li>
+        <li>Scrubbing, jet cleaning, disinfection</li>
+      </ul>
+      <a href="/detailed2" class="show-more">Show more →</a>
+    </div>
+    <div class="service-img">
+      <img src="https://i.postimg.cc/RZ4vL6JM/Overhead-Water-Tank-Cleaning-Upto-2000-Liters-1.jpg" alt="Underground Tank Cleaning">
+      <a href="/form"><button class="add-btn">Book Now</button></a>
+    </div>
+  </div>
+
+  <!-- Service 3 -->
+  <div class="service">
+    <div class="service-text">
+      <h2>3000 - 5000 Litres Water Tank Cleaning</h2>
+      <div class="price">₹1,499</div>
+      <ul>
+        <li>Water removal, sludge cleaning</li>
+        <li>Final rinse and disinfection</li>
+      </ul>
+      <a href="/detailed3" class="show-more">Show more →</a>
+    </div>
+    <div class="service-img">
+      <img src="https://i.postimg.cc/L64PQX1V/1.jpg" alt="Big Tank Cleaning">
+      <a href="/form"><button class="add-btn">Book Now</button></a>
+    </div>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer id="contact">
+  <h2>Contact Us</h2>
+  <p>Phone: 9063604024</p>
+  <p>Email: ugoohyderabad@gmail.com</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Book a Service</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .form-container {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+      width: 350px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    label {
+      float: left;
+      margin: 10px 0 5px 0;
+      font-weight: bold;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button, input[type="submit"] {
+      width: 100%;
+      padding: 12px;
+      background-color: red;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover, input[type="submit"]:hover {
+      background-color: darkred;
+    }
+
+    .links {
+      margin-top: 15px;
+    }
+
+    .links a {
+      text-decoration: none;
+      color: #007BFF;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Book a Service</h2>
+    <form method="post" action="/bookings">
+      <label>Name:</label><input type="text" name="name" required><br>
+      <label>Phone:</label><input type="text" name="phone" required><br>
+      <label>Service:</label><input type="text" name="service" required><br>
+      <label>Date:</label><input type="date" name="date" required><br>
+      <input type="submit" value="Submit Booking">
+    </form>
+    <div class="links">
+      <a href="/">🏠 Back to Home</a>
+    </div>
+  </div>
+</body>
+</html>
