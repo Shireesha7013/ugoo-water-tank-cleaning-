@@ -24,13 +24,14 @@
 
   <h2>Admin - Booking Details</h2>
   <table>
-    <tr><th>Time</th><th>Name</th><th>Phone</th><th>Service</th><th>Date</th></tr>
+    <tr><th>Time</th><th>Name</th><th>Address</th><th>Phone</th><th>Service</th><th>Date</th></tr>
     {% for booking in bookings %}
     <tr>
         <td>{{ booking.time }}</td>
         <td>{{ booking.name }}</td>
         <td>{{ booking.phone }}</td>
         <td>{{ booking.service }}</td>
+        <td>{{ booking.address }}</td>
         <td>{{ booking.date }}</td>
     </tr>
     {% endfor %}

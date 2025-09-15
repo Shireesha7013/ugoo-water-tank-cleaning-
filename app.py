@@ -33,27 +33,46 @@ def save_booking():
     name = request.form.get("name")
     phone = request.form.get("phone")
     service = request.form.get("service")
+    address = request.form.get("address")  # Removed extra comma
     date = request.form.get("date")
     time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
     ensure_file()
     with open(BOOKINGS_FILE, "a") as f:
-        f.write(f"{time} | {name} | {phone} | {service} | {date}\n")
+        f.write(f"{time} | {name} | {phone} | {service} | {address} | {date}\n")  # Ensure proper string formatting
 
-    return render_template("success.html", name=name, service=service, date=date)
+    return render_template("success.html", name=name, service=service, date=date, address=address)
 
 # ---------------- ADMIN LOGIN ----------------
 @app.route("/admin", methods=["GET", "POST"])
 def admin_login():
+    ensure_file()
+
     if request.method == "POST":
         username = request.form.get("username")
         password = request.form.get("password")
-        if username == ADMIN_USER and password == ADMIN_PASS:
-            session["admin_logged_in"] = True
-            return redirect(url_for("show_bookings"))
+
+        # Simple login check
+        if username == "admin" and password == "1234":
+            bookings = []
+            with open(BOOKINGS_FILE, "r") as f:
+                lines = f.readlines()[1:]  # skip "Bookings:" line
+                for line in lines:
+                    parts = line.strip().split(" | ")
+                    if len(parts) == 6:  # 6 fields: time, name, phone, service, address, date
+                        bookings.append({
+                            "time": parts[0],
+                            "name": parts[1],
+                            "phone": parts[2],
+                            "service": parts[3],
+                            "address": parts[4],
+                            "date": parts[5]
+                        })
+            return render_template("admin.html", bookings=bookings)
         else:
-            return render_template("admin.html", error="Invalid username or password")
-    return render_template("admin.html")
+            return render_template("admin_login.html", error="Invalid credentials!")
+
+    return render_template("admin_login.html")
 
 # ---------------- ADMIN BOOKINGS VIEW ----------------
 @app.route("/show_bookings", methods=["GET"])
@@ -67,13 +86,14 @@ def show_bookings():
         lines = f.readlines()[1:]  # Skip header
         for line in lines:
             parts = line.strip().split(" | ")
-            if len(parts) == 5:
+            if len(parts) == 6:  # 6 fields: time, name, phone, service, address, date
                 bookings.append({
                     "time": parts[0],
                     "name": parts[1],
                     "phone": parts[2],
                     "service": parts[3],
-                    "date": parts[4]
+                    "address":parts[4],
+                    "date": parts[5]
                 })
     return render_template("bookings.html", bookings=bookings)
 
